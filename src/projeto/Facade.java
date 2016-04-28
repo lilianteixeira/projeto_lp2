@@ -1,4 +1,4 @@
-package projeto_lp2;
+package projeto;
 
 public class Facade {
 
