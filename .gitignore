@@ -1,4 +1,4 @@
-# Created by https://www.gitignore.io/api/linux,windows,java,eclipse
+# Created by https://www.gitignore.io/api/linux,windows,java,eclipse.
 
 ### Linux ###
 *~
@@ -47,9 +47,6 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-
-# Eclipse Core
-.project
 
 # External tool builders
 .externalToolBuilders/
