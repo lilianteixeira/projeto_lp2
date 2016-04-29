@@ -1,37 +1,40 @@
-import java.util.Scanner;
+package projeto;
+
+import java.util.HashMap;
 
 
 public class HospitalController {
-
-	private Scanner sc;
-	private final String SENHA;
+	
+	private HashMap<String, Funcionario> funcionarios;
+	private final String CHAVE;
+	private FactoryFuncionario factory;
 	
 	public HospitalController(){
-		this.sc = new Scanner(System.in);
-		this.SENHA = "c041ebf8";
+		this.funcionarios = new HashMap<String, Funcionario>();
+		this.CHAVE = "c041ebf8";
+	
 	}
 	
-	public String liberaSistema(String chave){
-		//falta exception.
-		
-		while(chave != SENHA){
-			
-			System.out.println("Digite a chave de desbloqueio: ");
-			chave = sc.nextLine();
-			
-			if(chave == SENHA){
-				geraMatricula();
-			}
-			
+	public boolean liberaSistema(String chave){
+		if(chave == CHAVE){
+			return true;
 		}
-		return "";
+		return false;
+	}
+	
+	public void cadastraFuncionario(String nome, String dataNascimento, String cargo){
+		Funcionario novoFuncionario = factory.criaUsuario(nome, dataNascimento, cargo);
+		
+		//int matricula = geraMatricula();
+		
+		//funcionarios.put(matricula, novoFuncionario);
+		
 	}
 
-	private void geraMatricula() {
+	
+	public String geraMatricula() {
 		
+		return "";
 	}
 	
-	public void criaFuncionario(){
-		
-	}
 }

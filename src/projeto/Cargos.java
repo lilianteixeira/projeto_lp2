@@ -1,6 +1,8 @@
+package projeto;
+
 
 public enum Cargos {
 	
-	DIRETOR, MEDICO, TECADMINISTRATIVO;
+	DIRETOR, MEDICO, TECNICOADM;
 
 }
